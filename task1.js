@@ -11,16 +11,13 @@ printTasks(): Barcha vazifalarni konsolga chiqaradi */
 let todo = {
   tasks: [],        
   nextId: 1,       
-
   addTask(task) {
     this.tasks.push({ id: this.nextId, task: task });
     this.nextId++; 
   },
-
   removeTask(id) {
     this.tasks = this.tasks.filter(item => item.id !== id);
   },
-
   printTasks() {
     console.log("Vazifalar ro'yxati:");
     this.tasks.forEach(item => {
