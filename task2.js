@@ -72,6 +72,6 @@ let expenses = {
 expenses.addExpense("WaTer",2000);
 expenses.printMonthlyReport()
 
-// davomi
+
 
 

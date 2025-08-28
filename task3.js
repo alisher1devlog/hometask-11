@@ -11,8 +11,7 @@ countAll("149990") ➞ { "HARFLAR": 0, "RAQAMLAR": 6 } */
 
 
 function countAll(str){
-    // const raqam = /[0-9]/;
-    // const harf = /[a-zA-Z]/;
+    
     let countNum = 0;
     let countLetter = 0;
     for (let char of str) {

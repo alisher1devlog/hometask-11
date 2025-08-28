@@ -8,6 +8,33 @@ addTask(task): Yangi vazifani ro'yxatga qo'shadi.
 removeTask(id): Berilgan indeksdagi vazifani o'chiradi.
 printTasks(): Barcha vazifalarni konsolga chiqaradi */
 
-let obj = {
+let todo = {
+  tasks: [],        
+  nextId: 1,       
 
-}
+  addTask(task) {
+    this.tasks.push({ id: this.nextId, task: task });
+    this.nextId++; 
+  },
+
+  removeTask(id) {
+    this.tasks = this.tasks.filter(item => item.id !== id);
+  },
+
+  printTasks() {
+    console.log("Vazifalar ro'yxati:");
+    this.tasks.forEach(item => {
+      console.log(`${item.id}. ${item.task}`);
+    });
+  }
+};
+todo.addTask("Kitob o'qish");
+todo.addTask("Sport bilan shug'ullanish");
+todo.addTask("Kod yozish");
+
+todo.printTasks();
+
+todo.removeTask(2); 
+
+todo.printTasks();
+
