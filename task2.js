@@ -62,11 +62,16 @@ let expenses = {
         }
     },
     printMonthlyReport : function() {
-        console.log(`Bizda bor narsalar Water: ${this.water}, Gaz:${this.gas} Electricity: ${this.electricity}`);
+    console.log(`Suv uchun oylik xarajat: $${this.water}`);
+    console.log(`Gaz uchun oylik xarajat: $${this.gas}`);
+    console.log(`Elektr energiyasi uchun oylik xarajat: $${this.electricity}`);
         
 	}
 };
 
 expenses.addExpense("WaTer",2000);
 expenses.printMonthlyReport()
+
+// davomi
+
 
